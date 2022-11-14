@@ -11,7 +11,8 @@
 
   /* Background colors */
   --main-bg-color: #ffffff;
-  --secondary-bg-color: #2f303a;
+  --hero-bg-color:#C4C4C4;
+  --footer-bg-color: #2f303a;
   --accent-bg-color: #2196f3;
   --button-bg-color: #F5F4FA;
   --button-accent-color: #188ce8;
@@ -82,6 +83,13 @@ section {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / (var(--items)));
 }
 
+.title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+}
 
 
 /*---- HEADER----*/
@@ -158,7 +166,7 @@ display: flex;
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--hero-bg-color);
 }
 .hero-title {
   margin-bottom: 30px;
@@ -199,10 +207,46 @@ display: flex;
   background-color: var(--button-accent-color);
 }
 
+.overlay{
+  max-width: 1600px;
+ margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4) ),
+  url(../images/hero-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 /*----BENEFITS----*/
 
 .benefits-item {
 flex-grow: 1;
+}
+.benefits-item::before{
+  content: '';
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--button-bg-color);
+  background-position: center;
+  background-repeat: no-repeat;
+ /* background-image: url();*/
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna\ 1.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock\ 1.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram\ 1.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut\ 1.svg);
 }
 
 .benefits-subtitle {
@@ -228,20 +272,14 @@ flex-grow: 1;
   --items: 3;
 }
 
-.title { 
-  margin-bottom: 50px;
-
-  font-size: 36px;
-  line-height: calc(42 / 36);
-  text-align: center;
-}
-
 .team {
   background-color: var(--button-bg-color);
 }
+
 .team-item{
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
 .team-group {
 padding-top: 30px;
 padding-bottom:30px;
@@ -267,7 +305,7 @@ background-color: var(--main-bg-color);
 /*----FOOTER----*/
 
 .footer {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--footer-bg-color);
   padding-top:60px;
   padding-bottom: 60px;
 }
@@ -311,6 +349,10 @@ margin-top: 20px;
 
   margin-bottom: 50px;
 }
+.item-card:hover
+{
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .portfolio-btn {
   padding: 6px 22px;
@@ -335,8 +377,9 @@ margin-top: 20px;
 .portfolio-btn:focus {
   color: var(--ligth-text-color);
   background-color: var(--accent-bg-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
 .portfolio-subtitle {
   margin-bottom: 4px;
 
