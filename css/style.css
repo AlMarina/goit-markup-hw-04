@@ -1,5 +1,6 @@
 :root {
   /*fonts*/
+  
   --main-font: 'Roboto', Tahoma, sans-serif;
   --secondary-font: 'Raleway', Tahoma, sans-serif;
 
@@ -8,6 +9,7 @@
   --secondary-text-color: #757575;
   --ligth-text-color: #ffffff;
   --accent-text-color: #2196f3;
+  --icons-text-color: #afb1b8;
 
   /* Background colors */
   --main-bg-color: #ffffff;
@@ -16,6 +18,7 @@
   --accent-bg-color: #2196f3;
   --button-bg-color: #F5F4FA;
   --button-accent-color: #188ce8;
+  --social-bg-color: #ffffff1a;
 
   /* Others */
   --border-color: #ffffff;
@@ -99,7 +102,6 @@ align-items: center;
 }
 
 .page-header {
-/*border: 1px solid #ECECEC;*/
 border-bottom: 1px solid #ECECEC;
 }
 
@@ -155,12 +157,24 @@ display: flex;
   gap: 50px;
 }
 .header-link {
+  display: flex;
+  gap: 10px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
 }
+
+.header-icons {
+ fill: currentColor;
+}
+
+.header-link:hover .header-icons,
+.header-link:focus .header-icons {
+fill: var(--accent-text-color);
+  }
 
 /*----HERO----*/
 .hero {
@@ -230,23 +244,23 @@ flex-grow: 1;
   background-color: var(--button-bg-color);
   background-position: center;
   background-repeat: no-repeat;
- /* background-image: url();*/
+border-radius: 4px;
 }
 
 .icon-antenna::before {
-  background-image: url(../images/antenna\ 1.svg);
+  background-image: url(../images/icons/antenna\ 1.svg);
 }
 
 .icon-clock::before {
-  background-image: url(../images/clock\ 1.svg);
+  background-image: url(../images/icons/clock\ 1.svg);
 }
 
 .icon-diagram::before {
-  background-image: url(../images/diagram\ 1.svg);
+  background-image: url(../images/icons/diagram\ 1.svg);
 }
 
 .icon-astronaut::before {
-  background-image: url(../images/astronaut\ 1.svg);
+  background-image: url(../images/icons/astronaut\ 1.svg);
 }
 
 .benefits-subtitle {
@@ -256,6 +270,7 @@ flex-grow: 1;
   line-height: calc(16 / 14);
   text-transform: uppercase;
 }
+
 
 .benefits-text {
   font-size: 14px;
@@ -297,10 +312,71 @@ background-color: var(--main-bg-color);
 }
 
 .team-text {
+  margin-bottom: 16px;
+
   line-height: calc(19 / 16);
   text-align: center;
   color: var(--secondary-text-color);
 }
+
+
+
+.socials-link {
+display: flex;
+justify-content: center;
+  align-items: center;
+  width: 44px ;
+  height: 44px;
+  border-radius: 50%;
+
+  color: var(--icons-text-color);
+  background-color: var(--main-bg-color);
+
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+ align-items: center;
+  gap: 22px;
+}
+
+.team-icons {
+  fill: currentColor;
+}
+ .socials-link:hover ,
+ .socials-link:focus  {
+color: var(--ligth-text-color);
+background-color: var(--accent-bg-color);
+ }
+
+/*---- CLIENTS ----*/
+  .clients-list{
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  
+  
+}
+
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 91px;
+justify-content: center;
+  align-items: center;
+  border: 1px solid var(--icons-text-color);
+color: var(--icons-text-color);
+ }
+
+ .clients-icons{
+  fill: currentColor;
+ }
+.clients-link:hover .clients-icons,
+.clients-link:focus .clients-icons { 
+fill: var(--accent-text-color);
+}
+
 
 /*----FOOTER----*/
 
@@ -309,6 +385,13 @@ background-color: var(--main-bg-color);
   padding-top:60px;
   padding-bottom: 60px;
 }
+
+.footer-div {
+display: flex;
+gap: 70px;
+align-items: baseline;
+}
+
 .logo-footer {
   color: var(--ligth-text-color);
 }
@@ -340,6 +423,42 @@ margin-top: 20px;
 .footer-link-adress:focus {
   color: var(--accent-text-color);
 }
+
+.footer-subtitle {
+margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  color:var(--ligth-text-color);
+}
+
+.footer-social-list{
+display: flex;
+gap: 10px;
+}
+
+.socials-link-footer {
+display: flex;
+width: 44px;
+height: 44px;
+justify-content: center;
+align-items: center;
+  border-radius: 50%;
+color: var(--ligth-text-color);
+background-color: var(--social-bg-color);
+
+}
+.footer-icons {
+  fill: currentColor;
+}
+
+.socials-link-footer:hover,
+.socials-link-footer:focus {
+  background-color: var(--accent-bg-color);
+}
+
 
 /*----PORTFOLIO----*/
 .flex-list {
